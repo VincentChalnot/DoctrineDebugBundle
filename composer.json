@@ -1,0 +1,26 @@
+{
+    "name": "sidus/doctrine-debug-bundle",
+    "description": "Adds stack trace to Doctrine queries in Symfony profiler",
+    "keywords": [
+        "doctrine",
+        "stack",
+        "trace",
+        "query"
+    ],
+    "homepage": "https://github.com/VincentChalnot/SidusDoctrineDebugBundle",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Vincent Chalnot",
+            "email": "vincent@sidus.fr",
+            "homepage": "http://chalnot.fr",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sidus\\DoctrineDebugBundle\\": ""
+        }
+    }
+}
