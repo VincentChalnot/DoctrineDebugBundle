@@ -42,7 +42,7 @@ class DbDataCollectorCompilerPass implements CompilerPassInterface
             $templates = $container->getParameter('data_collector.templates');
             $templates['data_collector.doctrine'] = [
                 'db',
-                'SidusDoctrineDebugBundle:Collector:db.html.twig',
+                '@SidusDoctrineDebug/Collector/db.html.twig',
             ];
             $container->setParameter('data_collector.templates', $templates);
         }
