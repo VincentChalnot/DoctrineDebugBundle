@@ -9,7 +9,7 @@
     ],
     "homepage": "https://github.com/VincentChalnot/SidusDoctrineDebugBundle",
     "type": "library",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Vincent Chalnot",
