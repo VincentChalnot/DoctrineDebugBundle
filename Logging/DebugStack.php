@@ -23,10 +23,9 @@ class DebugStack extends \Doctrine\DBAL\Logging\DebugStack
     public function startQuery($sql, array $params = null, array $types = null)
     {
         parent::startQuery($sql, $params, $types);
-        if ($this->enabled && function_exists('xdebug_get_function_stack')) {
-            /** @noinspection ForgottenDebugOutputInspection */
-            $stack = xdebug_get_function_stack(null, XDEBUG_STACK_NO_DESC);
-            $this->queries[$this->currentQuery]['stack'] = array_splice($stack, 1, -2);
+        if ($this->enabled) {
+            $stack = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
+            $this->queries[$this->currentQuery]['stack'] = array_splice($stack, 2);
         }
     }
 }

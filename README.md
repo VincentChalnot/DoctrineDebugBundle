@@ -31,16 +31,14 @@ class AppKernel extends Kernel
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
-            $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
-            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            
-            // HERE!
-            $bundles[] = new \Sidus\DoctrineDebugBundle\SidusDoctrineDebugBundle();
+            // ...
 
             if ('dev' === $this->getEnvironment()) {
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
                 $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
+
+                // HERE!
+                $bundles[] = new Sidus\DoctrineDebugBundle\SidusDoctrineDebugBundle();
             }
         }
 
@@ -49,3 +47,11 @@ class AppKernel extends Kernel
     // ...
 }
 ```
+
+## Changelog
+
+### v1.0.2
+Doesn't require xdebug to be installed anymore.
+
+### v1.0.1
+Fixing compatibility with Web Profiler 4
